@@ -1,0 +1,2 @@
+- usage: window.SingularSdkPlugin.initSingular([apiKey, secretSingularKey, *username*], *success callback*)
+	- import apiKey and secretSingularKey from constants
