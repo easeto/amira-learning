@@ -1,0 +1,31 @@
+@media print {
+  .reportPrintHeader{
+    color: $light-text-grey;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 100%;
+    .home{
+      font-weight: 600;
+      height: 48px;
+      text-align: right;
+      .amiraLogo {
+        height: 30px;
+        width: 90px;
+        padding-top: 16px;
+      }
+    }
+    .reportName{
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen {
+  .reportPrintHeader{
+    display: none;
+  }
+}

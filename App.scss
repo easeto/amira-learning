@@ -1,0 +1,103 @@
+.appContainer{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  .speech{
+    height: 100%;
+    position: relative;
+    flex-grow: 1;
+    .app{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      .readerContainer{
+        float: left;
+        height: calc(100% - 160px);
+        width: calc(100% - 430px);
+        margin-left: 40px;
+        margin-top: 40px;
+      }
+      .readerContainer.fullScreen{
+        width: calc(100% - 160px);
+      }
+      .rightPanel{
+        margin-top: 40px;
+        margin-right: 40px;
+        float: right;
+        position: relative;
+
+
+        .navigationContainer{
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 100%;
+        }
+        .menuContainer{
+          position: absolute;
+          top: -20px;
+          right: -20px;
+        }
+      }
+    }
+  }
+}
+
+/* special case teacher mode styling (to make reports work in the box) */
+.appContainer.teacherMode{
+  background-image: none;
+  background-color: $background-grey;
+  .app{
+    max-width: 1480px;
+    padding: 0 38px;
+    width: calc(100% - 76px);
+    height: calc(100% - 48px);
+    position: static;
+    margin: 0 auto;
+    .readerContainer{
+      height: calc(100% - 200px);
+      margin-left: 0px;
+    }
+    .readerContainer.reportBox{
+      height: calc(100% - 32px);
+      width: calc(100% - 262px);
+      margin-left: 0px;
+      margin-top: 0px;
+      .modalBackground{
+        width: 100vw;
+        left: -300px;
+      }
+    }
+    .rightPanel{
+      margin: 20px 0px 0px 20px;
+    }
+    .rightPanel.hidden{
+      display: none;
+    }
+    @media print {
+      width: 100%;
+      height: 100%;
+      padding: 0 5px;
+      .rightPanel {
+        display: none;
+      }
+      .readerContainer {
+        width: 100vw;
+        height: 100vh;
+        float: none;
+      }
+      .readerContainer.reportBox {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@import './Reader/Reader.scss';
+@import './Teacher/Teacher.scss';
+@import './Navigation.scss';
+@import './Header.scss';
+@import './Footer.scss';
+@import './Reports/index.scss';
+@import './Global/Global.scss';
+@import './Settings/Settings.scss';

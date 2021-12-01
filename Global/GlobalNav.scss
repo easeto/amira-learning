@@ -1,0 +1,68 @@
+.globalNav{
+  height: 48px;
+  background-color: $background-grey;
+  color: $dark-text-grey;
+  font-size: 18px;
+  letter-spacing: 1px;
+
+  .logoutIcon {
+    color: $dark-text-grey;
+    padding: 0 6px 0 0;
+    position: relative;
+    bottom: 1px;
+  }
+
+  .navButtonContainer{
+    display: flex;
+    max-width: 1480px;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0 38px;
+    align-items: center;
+    justify-content: space-between;
+
+    .home{
+      cursor: pointer;
+      font-weight: 600;
+      height: 48px;
+      padding: 0 10px 0 0;
+      display: flex;
+      flex-basis: 200px;
+      align-items: center;
+
+      img {
+        height: 30px;
+        width: 90px;
+        padding-top: 16px;
+      }
+    }
+    .rightButtons{
+      display: flex;
+      .navButton{
+        text-align: justify;
+        cursor: pointer;
+        margin: 0 28px 0 28px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 6px;
+        position: relative;
+        bottom: 6px;
+        height: 46px;
+      }
+      .navButton.active{
+        border-bottom: 2px solid $dark-text-grey;
+        font-weight: 500;
+      }
+      .navButton.logoutButton{
+        margin: 0 0 0 144px;
+        letter-spacing: .5;
+      }
+    }
+  }
+}
+
+@media print {
+  .globalNav {
+    display: none;
+  }
+}

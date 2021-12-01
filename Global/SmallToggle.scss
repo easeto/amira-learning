@@ -1,0 +1,45 @@
+// Adapted from https://codepen.io/mburnette/pen/LxNxNg
+
+.smallToggle {
+  .pillInput[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  .pillLabel {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 46px;
+    height: 22px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  .pillLabel:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+
+  .pillInput:checked + .pillLabel {
+    background: $teacher-confirmation-green;
+  }
+
+  .pillInput:checked + .pillLabel:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+
+  .pillLabel:active:after {
+    width: 32px;
+  }
+}
