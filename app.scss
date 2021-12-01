@@ -1,0 +1,15 @@
+@import './amira_styles.scss';
+@import './components/App.scss';
+
+body {
+  margin: 0;
+  overflow: hidden;//to hide the overflow of the Intervention Menu
+  height: 100%;
+  background-image: url('images/student_background.svg');
+  background-size: cover;
+
+
+  /* HIDE SCROLLBARS IN EDGE */
+  /* they will appear on focus. to make them always invisible replace this with  `-ms-overflow-style: none;`*/
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
