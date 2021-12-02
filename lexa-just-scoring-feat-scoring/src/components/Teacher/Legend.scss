@@ -1,0 +1,69 @@
+.legendWrapper {
+  position: relative;
+  top: -34px;
+  .legend {
+    border: 1px solid $teacher-item-border;
+    border-radius: 5.5px;
+    .legendItem {
+      display: flex;
+      height: 29px;
+      max-width: 244px;
+      padding: 10px;
+      color: $dark-text-grey;
+      align-items: center;
+      .legendItemBlock {
+        width: 29px;
+        height: 29px;
+        margin-right: 10px;
+
+        .icon {
+          height:30px;
+          width:auto;
+        }
+      }
+      .legendItemBlock.great {
+        background-color: $data-vis-green;
+      }
+      .legendItemBlock.bad {
+        background-color: $watermelon;
+      }
+      .legendItemBlock.average {
+        background-color: $marigold-lite;
+      }
+    }
+    .legendItem:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media print {
+  .legendWrapper {
+    display: flex;
+    top: -44px;
+    overflow: hidden;
+    max-width: 98%;
+    justify-content: center;
+    margin-bottom: -34px;
+    .legend {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .legendItem {
+        margin-bottom: 0;
+        .legendItemBlock.great {
+          -webkit-print-color-adjust: exact;
+          background-color: $data-vis-green;
+        }
+        .legendItemBlock.bad {
+          -webkit-print-color-adjust: exact;
+          background-color: $watermelon;
+        }
+        .legendItemBlock.average {
+          -webkit-print-color-adjust: exact;
+          background-color: $marigold-lite;
+        }
+      }
+    }
+  }
+}

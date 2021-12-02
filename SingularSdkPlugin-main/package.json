@@ -1,0 +1,19 @@
+{
+  "name": "SingularSdkPlugin",
+  "version": "0.1.0",
+  "description": "Used to connect cordova with singular sdk",
+  "cordova": {
+    "id": "SingularSdkPlugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,112 @@
+.reports-student-miller {
+  position: relative;
+}
+
+.reports-current-select {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.reports-current-select__control {
+  border-radius: 5.5px !important;
+  cursor: pointer !important;
+  height: 52px;
+  border: 2px solid $dark-background-grey;
+  transition: border .5s;
+}
+
+.reports-current-select__option {
+  cursor: pointer !important;
+}
+
+.reports-current-select__placeholder {
+  color: $whale-blue !important;
+}
+
+.reports-current-select__indicator-separator {
+  display: none;
+}
+
+.reports-current-select__menu {
+  font-weight: 400;
+}
+
+.reportsPrimaryPickerOpenPrefix__control {
+  border-radius: 5.5px 5.5px 0 0 !important;
+  box-shadow: 3px 3px 8px rgba(169, 174, 183, .5) !important;
+  cursor: pointer !important;
+  height: 52px;
+  border: 2px solid #4285f7 !important;
+  border-bottom: none !important;
+}
+
+.reportsPrimaryPickerOpenPrefix__control:hover {
+  box-shadow: 3px 3px 8px rgba(169, 174, 183, .5) !important;
+  border: 2px solid #4285f7 !important;
+  border-bottom: none !important;
+}
+
+
+.reportsPrimaryPickerOpenPrefix__indicator-separator {
+  display: none;
+}
+
+.reportsPrimaryPickerOpenPrefix__placeholder {
+  color: $whale-blue !important;
+}
+
+.reportsPrimaryPickerOpenPrefix__menu {
+  max-height: calc(100vh - 320px) !important;
+  margin-top: -1px !important;
+  border-radius: 0px 0px 4px 4px !important;
+  border: 2px solid #4285F7 !important;
+  border-top: 1px solid $dark-background-grey !important;
+  cursor: pointer !important;
+  box-shadow: 3px 3px 8px rgba(169, 174, 183, .5) !important;
+}
+
+.reportsPrimaryPickerOpenPrefix__menu-list {
+  max-height: calc(100vh - 338px) !important;
+  cursor: pointer !important;
+}
+
+.reportsPrimaryPickerOpenPrefix__option {
+  font-weight: 400 !important;
+  cursor: pointer !important;
+}
+
+.reports-current-select__menu {
+  max-height: calc(100vh - 320px) !important;
+  margin-top: -1px !important;
+  border-radius: 0px 0px 4px 4px !important;
+  border: 2px solid #4285F7 !important;
+  border-top: 1px solid $dark-background-grey !important;
+  cursor: pointer !important;
+  box-shadow: 3px 3px 8px rgba(169, 174, 183, .5) !important;
+}
+
+.reports-current-select__menu-list {
+  max-height: calc(100vh - 338px) !important;
+  cursor: pointer !important;
+}
+
+.reports-current-select__option {
+  font-weight: 400 !important;
+  cursor: pointer !important;
+}
+
+.reportsPrimaryDisabledSelect__control {
+  border-radius: 5.5px !important;
+  cursor: pointer !important;
+  height: 52px;
+  border: 2px solid $dark-background-grey;
+  background-color: $background-grey !important;
+  transition: border .5s;
+  pointer-events: none !important;
+}
+
+.reportsPrimaryDisabledSelect__indicator-separator {
+  display: none;
+}

@@ -1,0 +1,13 @@
+repositories {
+        google()
+        maven { url 'https://maven.google.com' }
+        maven { url 'http://maven.singular.net/' }
+        jcenter()
+    }
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:21.0.3'
+    implementation 'com.singular.sdk:singular_sdk:9.6.0'
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+}

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="SingularSdkPlugin" version="0.1.0"
+  xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>SingularSdkPlugin</name>
+  <js-module name="SingularSdkPlugin" src="www/SingularSdkPlugin.js">
+    <clobbers target="SingularSdkPlugin" />
+  </js-module>
+  <platform name="ios">
+    <framework src="Singular-SDK" type="podspec" spec="~> 10.1.5"></framework>
+    <framework src="AdSupport.framework" weak="true" />
+    <framework src="AppTrackingTransparency.framework" weak="true" />
+    <config-file parent="/*" target="config.xml">
+      <feature name="SingularSdkPlugin">
+        <param name="ios-package" value="SingularSdkPlugin" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/SingularSdkPlugin.m" />
+  </platform>
+  <platform name="android">
+    <framework custom="true" src="src/android/SingularSdkPlugin.gradle" type="gradleReference"></framework>
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="SingularSdkPlugin">
+        <param name="android-package" value="SingularSdkPlugin.SingularSdkPlugin" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    <source-file src="src/android/SingularSdkPlugin.java" target-dir="src/SingularSdkPlugin/SingularSdkPlugin" />
+  </platform>
+</plugin>

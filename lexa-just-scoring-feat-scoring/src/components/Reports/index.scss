@@ -1,0 +1,67 @@
+@import './blocks/index.scss';
+@import '../../amira_styles.scss';
+
+/*TODO: this should not exist and should be one and the same with App.js/App.scss
+Alternatively, move this to somewhere that we use for global teacher styles */
+
+.reports-root-container {
+  height: 100%;
+  width: 100%;
+  background-color: $background-grey;
+}
+
+.reports-page-wrap{
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+@media print {
+  .reports-page-wrap {
+    padding-top: 15px;
+  }
+}
+
+.reports-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reportsHidden {
+  opacity: 0;
+}
+
+.teacherNoStudentsNotice {
+  padding-top: 52px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: $light-text-grey;
+  .noActivityLink {
+    text-decoration: none;
+    font-weight: 400;
+    color: $whale-blue;
+  }
+  div:nth-child(1) {
+    padding-bottom: 18px;
+    font-size: 28px;
+    font-weight: 300;
+  }
+  div:nth-child(n+1) {
+    font-weight: 300;
+  }
+  div:nth-child(n+2) {
+    max-width: 650px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: $dark-text-grey;
+    line-height: 24px;
+    text-align: left;
+  }
+}

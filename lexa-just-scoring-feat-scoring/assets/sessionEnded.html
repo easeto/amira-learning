@@ -1,0 +1,52 @@
+<html>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <head>
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+      <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #4a4a4a;
+      }
+      .amira-logo {
+        height: 55px;
+        width: auto;
+        margin-bottom: 40px;
+      }
+      .message-container {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(249, 246, 242);
+        padding: 50px 80px;
+        text-align: left;
+        box-sizing: content-box;
+        box-shadow: rgba(169, 174, 183, 0.7) 10px 10px 15px;
+        border-radius: 6px;
+      }
+      .message {
+        margin-bottom: 45px;
+        font-size: 20px;
+        color: #6d6d6d;
+        text-align: center;
+      }
+      .message-action {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message-container">
+      <img alt="amira logo" class="amira-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTYuNDUgNDguODMiPjxkZWZzPjxzdHlsZT4uYXtmaWxsOiMxZmE3ZGY7fS5ie2ZpbGw6IzAwYzM1Nzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFtaXJhX0xvZ29fdjI8L3RpdGxlPjxwb2x5Z29uIGNsYXNzPSJhIiBwb2ludHM9IjI5LjQ3IDIwLjEyIDI5LjQ3IDM4LjkxIDMzLjUxIDM4LjkxIDMzLjU1IDI4LjA2IDQxLjA2IDM4LjkxIDQ1LjA5IDM4Ljk2IDUyLjY2IDI3Ljk4IDUyLjY4IDM4LjkgNTYuNzIgMzguOTEgNTYuNzIgMjAuMTIgNTIuNjcgMjAuMTIgNDMuMSAzMy44OSAzMy40MyAyMC4xIDI5LjQ3IDIwLjEyIi8+PHJlY3QgY2xhc3M9ImIiIHg9IjU5LjM2IiB5PSIyMC4wOCIgd2lkdGg9IjQuMDIiIGhlaWdodD0iMTguODUiLz48cGF0aCBjbGFzcz0iYiIgZD0iTTEwMS4yNiwzNTMuMTRoNUw5NC43MiwzMzQuMzNIOTAuNTlMNzguMDUsMzUzLjE0aDUuNTlsMi0zLjJIOTkuMjhabS0xMy4yLTYuODksNC41NS03LjA5TDk3LDM0Ni4yNUg4OC4wNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03OC4wNCAtMzE0LjIxKSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTg5LjA2LDM1My4xNGg1bC0xMS41NS0xOC44MUgxNzguNGwtMTIuNTQsMTguODFoNS41OWwyLTMuMmgxMy41OVptLTEzLjItNi44OSw0LjU1LTcuMDksNC4zOSw3LjA5aC04Ljk0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc4LjA0IC0zMTQuMjEpIi8+PHBhdGggY2xhc3M9ImEiIGQ9Ik0xNjUuNDEsMzQxLjJ2LTIuNTNBNC4zOCw0LjM4LDAsMCwwLDE2MSwzMzQuM0gxNDQuNDJsMCwxOC44NGg0LjA2di03LjU0aDguNjRsMy45MSw3LjU0aDQuMjZsLTQtNy41NnYwQTQuMzgsNC4zOCwwLDAsMCwxNjUuNDEsMzQxLjJabS0xNy0yLjkzaDExLjVhMS4xNSwxLjE1LDAsMCwxLDEuMTUsMS4xNXYxLjE0YTEuMTUsMS4xNSwwLDAsMS0xLjE1LDEuMTVsLTMuMjgsMGgtOC4yM3YtMy40NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03OC4wNCAtMzE0LjIxKSIvPjxwb2x5Z29uIGNsYXNzPSJiIiBwb2ludHM9IjYwLjU3IDQyLjQ5IDYwLjU4IDQ4LjgxIDYxLjk5IDQ4LjgxIDYxLjk4IDQ0LjM0IDY3LjQ4IDQ4LjgyIDY4Ljg4IDQ4LjgyIDY4Ljg4IDQyLjQ5IDY3LjQ4IDQyLjQ5IDY3LjQ3IDQ3LjA1IDYxLjg2IDQyLjQ4IDYwLjU3IDQyLjQ5Ii8+PHBvbHlnb24gY2xhc3M9ImIiIHBvaW50cz0iNzUuODMgNDIuNDkgNzUuODMgNDguODEgNzcuMjQgNDguODEgNzcuMjQgNDQuMzQgODIuNzQgNDguODIgODQuMTMgNDguODIgODQuMTMgNDIuNDkgODIuNzQgNDIuNDkgODIuNzQgNDcuMDUgNzcuMTEgNDIuNDggNzUuODMgNDIuNDkiLz48cmVjdCBjbGFzcz0iYiIgeD0iNzEuNTMiIHk9IjQyLjQ3IiB3aWR0aD0iMS4zNSIgaGVpZ2h0PSI2LjM1Ii8+PHJlY3QgY2xhc3M9ImIiIHg9Ijg3LjA2IiB5PSIzNTAuMjQiIHdpZHRoPSIxLjI3IiBoZWlnaHQ9IjE5LjMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM2OS41NCAtNDIuMDIpIHJvdGF0ZSg5MCkiLz48cmVjdCBjbGFzcz0iYiIgeD0iMTg0LjIiIHk9IjM1MC4yNCIgd2lkdGg9IjEuMjciIGhlaWdodD0iMTkuMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDY2LjY4IC0xMzkuMTYpIHJvdGF0ZSg5MCkiLz48cGF0aCBjbGFzcz0iYiIgZD0iTTEyNS41MiwzNjNoMS42OGwtMy44OC02LjMyaC0xLjM5TDExNy43MywzNjNoMS44OGwwLjY5LTEuMDdoNC41N1ptLTQuNDQtMi4zMSwxLjUzLTIuMzgsMS40OCwyLjM4aC0zWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc4LjA0IC0zMTQuMjEpIi8+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xMzYuMTQsMzU5di0wLjg1YTEuNDcsMS40NywwLDAsMC0xLjQ3LTEuNDdIMTI5LjFWMzYzaDEuMzZ2LTIuNTNoMi45bDEuMzEsMi41M2gxLjQzbC0xLjMzLTIuNTRoMEExLjQ3LDEuNDcsMCwwLDAsMTM2LjE0LDM1OVptLTUuNjktMWgzLjg2YTAuMzksMC4zOSwwLDAsMSwuMzguMzh2MC4zOGEwLjM5LDAuMzksMCwwLDEtLjM4LjM4aC0zLjg2VjM1OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03OC4wNCAtMzE0LjIxKSIvPjxwb2x5Z29uIGNsYXNzPSJiIiBwb2ludHM9IjIyLjMxIDQyLjQ3IDIzLjc1IDQyLjQ3IDIzLjc1IDQ3LjU0IDI4LjY4IDQ3LjU0IDI4LjY4IDQ4LjgxIDIyLjMzIDQ4LjgxIDIyLjMxIDQyLjQ3Ii8+PHBvbHlnb24gY2xhc3M9ImIiIHBvaW50cz0iMzIuNjcgNDMuOTMgMzcuNTcgNDMuOTMgMzcuNTcgNDIuNDggMzEuMjcgNDIuNDggMzEuMjcgNDguODEgMzcuNTcgNDguODEgMzcuNTcgNDcuNTUgMzIuNjcgNDcuNTUgMzIuNjcgNDYuMzYgMzcuNTcgNDYuMzYgMzcuNTcgNDUuMDMgMzIuNjcgNDUuMDMgMzIuNjcgNDMuOTMiLz48cGF0aCBjbGFzcz0iYiIgZD0iTTE3MC42NCwzNTkuMjhoLTEuMzd2MS4yOWgxLjM3djAuNzlhMC4zNywwLjM3LDAsMCwxLS4zNy4zN2gtNGEwLjM3LDAuMzcsMCwwLDEtLjM3LTAuMzd2LTNhMC4zNywwLjM3LDAsMCwxLC4zNy0wLjM3SDE3MnYtMS4yOWgtNi4xM2ExLjMsMS4zLDAsMCwwLTEuMywxLjN2My43MmExLjMsMS4zLDAsMCwwLDEuMywxLjNoNC44NGExLjMsMS4zLDAsMCwwLDEuMy0xLjN2LTIuNDVoLTEuMzNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzguMDQgLTMxNC4yMSkiLz48cG9seWdvbiBjbGFzcz0iYSIgcG9pbnRzPSI2NS45MiAyLjg4IDM1LjgxIDAgOCAxMS4zMiAzOC40OSAxNC4xIDYwLjY2IDUuMDMgNjAuNjYgMTMuMDUgNjEuOTMgMTMuMDUgNjEuOTMgNC41MSA2NS45MiAyLjg4Ii8+PGVsbGlwc2UgY2xhc3M9ImIiIGN4PSI2MS4yOSIgY3k9IjEzLjcyIiByeD0iMi4xNSIgcnk9IjEuOTYiLz48L3N2Zz4=">
+      <div class="message">
+        This session has ended because Amira has opened in another browser tab.
+        <div class="message-action">Please close this tab.</div>
+      </div>
+    </div>
+  </body>
+</html>

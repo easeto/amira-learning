@@ -1,0 +1,21 @@
+.navigation{
+  color: white;
+  .buttonContainer{
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    .buttonSvg{
+      height: 100%;
+    }
+  }
+  .forwardContainer{
+    background-color: #00ecb1;
+  }
+  .backContainer{
+    margin-right: 35px;
+    background-color: #ffa300;
+  }
+}

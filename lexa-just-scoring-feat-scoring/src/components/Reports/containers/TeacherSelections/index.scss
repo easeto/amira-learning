@@ -1,0 +1,182 @@
+.report-selections {
+  flex: 1 0 276px;
+  position: relative;
+  padding: 0 20px 0 0;
+}
+
+@media print {
+  .report-selections{
+    display: none;
+  }
+}
+
+.reportsRadioButton:hover label{
+  color: #2684FF;
+}
+
+.reportsRadioButton:hover .check {
+  border: 3px solid #2684FF;
+}
+
+.reportsRadioButtonSet {
+  background-color: white;
+  border-radius: 6px;
+  padding: 0 6px 8px 0;
+  border: 1px solid $teacher-button-border-grey;
+  z-index: 0;
+  position: relative;
+}
+
+.reportsSubselection {
+  margin-left: 0px;
+}
+
+.reportsRadioButton {
+  color: $dark-text-grey;
+  font-size: 14px;
+  padding-left: 8px;
+  position: relative;
+
+  input[type=radio]{
+    position: absolute;
+    top: 14px;
+    visibility: hidden;
+  }
+
+  label{
+    display: block;
+    position: relative;
+    padding: 2px 0px 0px 26px;
+    margin: 0px auto;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-transition: all 0.2s linear;
+  }
+
+  .check{
+    display: block;
+    position: absolute;
+    border: 3px solid #AAAAAA;
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    top: 14px;
+    left: 8px;
+    transition: border .2s linear;
+    -webkit-transition: border .2s linear;
+  }
+
+  .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 6px;
+    width: 6px;
+    top: 3px;
+    left: 3px;
+    margin: auto;
+    transition: background 0.2s linear;
+    -webkit-transition: background 0.2s linear;
+  }
+
+  input[type=radio]:checked ~ .check {
+    border: 3px solid #2684FF;
+  }
+
+  input[type=radio]:checked ~ .check::before{
+    background: #2684FF;
+  }
+
+  input[type=radio]:checked ~ label{
+
+  }
+
+}
+
+.reportsCheckbox {
+  height: 32px;
+  color: $dark-text-grey;
+  font-size: 14px;
+
+  label{
+    padding: 5px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
+
+.reportsAdditionalSelections {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.reportsAdditionalSelections .smallToggle {
+  padding-bottom: 10px;
+}
+
+.reportsAdditionalSelections.hidden {
+  opacity: 0;
+}
+
+.teacherSelectionBack {
+  font-size: 14px;
+  font-weight: 500;
+  color: $deep-blue;
+  .teacherBackBtn {
+    position: relative;
+    top: -2px;
+    fill: $deep-blue;
+  }
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+.teacherSelectionHeader {
+  margin-top: 0px;
+  color: $dark-text-grey;
+  font-weight: 300;
+  font-size: 30px;
+  margin: 0 0 24px 0;
+  line-height: 1;
+}
+
+.reportsMetricConfigTitle {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 52px 0 0 0;
+  color: $light-text-grey;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.reportsAdditionalSelectionTitle {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: $light-text-grey;
+  margin: 16px 0 4px 0;
+  line-height: 1;
+}
+
+.report-selection-body img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -15px;
+  opacity: .8;
+  padding-right: 10px;
+}
+
+.reports-student-list {
+  line-height: 210%;
+  color: #727272;
+  height: 390px;
+  column-fill: auto;
+  column-width: 120px;
+  font-size: 16px;
+  padding: 0;
+}
+
+
