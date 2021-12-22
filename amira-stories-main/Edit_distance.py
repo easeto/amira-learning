@@ -17,7 +17,7 @@ def editDistDP(str1, str2, m, n):
   
     return dp[m][n]
   
-str1 = "stop"
-str2 = "crop"
+#str1 = "stop"
+#str2 = "crop"
   
-print(editDistDP(str1, str2, len(str1), len(str2)))
+#print(editDistDP(str1, str2, len(str1), len(str2)))
